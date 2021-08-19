@@ -1,15 +1,15 @@
 version: 1.0.0
 publisher: suyashg
 editors:
-  - id: eclipse/che-theia/next
-    title: Eclipse Theia development version.
-    displayName: theia-ide
-    description: Eclipse Theia, get the latest release each day.
+  - id: codercom/code-server
+    title: VS Code Editor
+    displayName: vs-code
+    description: VS Code Editor for eclipse che
     icon: https://raw.githubusercontent.com/theia-ide/theia/master/logo/theia-logo-no-text-black.svg?sanitize=true
-    repository: https://github.com/eclipse-che/che-theia
+    repository: https://github.com/microsoft/vscode
     firstPublicationDate: "2021-01-01"
     endpoints:
-      - name: "theia"
+      - name: "vscode"
         public: true
         targetPort: 3100
         attributes:
@@ -19,8 +19,8 @@ editors:
           cookiesAuthEnabled: true
           discoverable: false
     containers:
-      - name: theia-ide
-        image: https://raw.githubusercontent.com/microsoft/vscode-dev-containers/main/containers/docker-from-docker/.devcontainer/Dockerfile
+      - name: vscode
+        image: codercom/code-server
         mountSources: true
         ports:
           - exposedPort: 3100
