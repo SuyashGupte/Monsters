@@ -20,7 +20,7 @@ editors:
           discoverable: false
     containers:
       - name: vscode
-        image: codercom/code-server:latest
+        image: "codercom/code-server:latest"
         mountSources: true
         ports:
           - exposedPort: 3100
