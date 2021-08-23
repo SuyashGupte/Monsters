@@ -10,15 +10,15 @@ editors:
     endpoints:
       - name: "vscode"
         public: true
-        targetPort: 8080
+        targetPort: 8843
         attributes:
           protocol: http
           type: ide
     containers:
       - name: vscode
-        image: codercom/code-server:latest
+        image: https://raw.githubusercontent.com/sr229/che-cdr/master/Dockerfile
         mountSources: true
         ports:
-          - exposedPort: 8080
+          - exposedPort: 8843
         memoryLimit: "512M"
         
