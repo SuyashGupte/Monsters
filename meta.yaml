@@ -7,6 +7,17 @@ editors:
     description: VS Code Editor for Eclipse che
     icon: https://raw.githubusercontent.com/theia-ide/theia/master/logo/theia-logo-no-text-black.svg?sanitize=true
     repository: https://github.com/cdr/code-server
+    firstPublicationDate: "2021-01-01"
+    endpoints:
+      - name: "vscode"
+        public: true
+        targetPort: 8080
+        attributes:
+          protocol: http
+          type: ide
+          secure: true
+          cookiesAuthEnabled: true
+          discoverable: false
     containers:
       - name: vscode
         image: codercom/code-server:latest
@@ -14,3 +25,4 @@ editors:
         ports:
           - exposedPort: 8080
         memoryLimit: "512M"
+        
