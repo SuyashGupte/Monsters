@@ -12,5 +12,5 @@ editors:
         image: codercom/code-server:latest
         mountSources: true
         ports:
-          - exposedPort: 3100
+          - exposedPort: 8080
         memoryLimit: "512M"
