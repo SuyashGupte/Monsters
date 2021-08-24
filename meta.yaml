@@ -1,7 +1,7 @@
 version: 1.0.0
 publisher: codercom
 editors:
-  - id: cdr/code-server/latest
+  - id: latest
     title: VS Code Editor
     displayName: vs-code
     description: VS Code Editor for Eclipse che
