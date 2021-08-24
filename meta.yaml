@@ -16,7 +16,7 @@ editors:
           type: ide
     containers:
       - name: vscode
-        image: codercom/code-server:latest
+        image: https://raw.githubusercontent.com/cdr/deploy-code-server/main/Dockerfile
         mountSources: true
         ports:
           - exposedPort: 8080
