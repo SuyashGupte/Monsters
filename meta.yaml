@@ -1,7 +1,7 @@
 version: 1.0.0
-publisher: suyashg
+publisher: codercom
 editors:
-  - id: codercom/code-server
+  - id: cdr/code-server/latest
     title: VS Code Editor
     displayName: vs-code
     description: VS Code Editor for Eclipse che
@@ -9,9 +9,7 @@ editors:
     repository: https://github.com/cdr/code-server
     containers:
       - name: vscode
-        image: https://raw.githubusercontent.com/cdr/deploy-code-server/main/Dockerfile
-        mountSources: true
-        ports:
-          - exposedPort: 8080
+        type: dockerimage
+        image: 'codercom/code-server:latest'
         memoryLimit: "512M"
         
