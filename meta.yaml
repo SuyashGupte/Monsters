@@ -20,6 +20,7 @@ editors:
           volumeMounts:
             - name: user-data
               path: /home/coder/.local/share/code-server
+              ephemeral: true
           mountSources: true
           memoryLimit: 1024M
           endpoints:
