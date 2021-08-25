@@ -1,28 +1,36 @@
 version: 1.0.0
-publisher: codercom
 editors:
-  - id: cdr/code-server/latest
-    title: Visual Studio Code - Web (code-server)
-    displayName: code-server
-    description: An open source distribution of Visual Studio Code as a cloud IDE
-    icon: https://raw.githubusercontent.com/sr229/discord-open-source/master/logos/code-server.svg
-    repository: 'https://github.com/cdr/code-server'
-    firstPublicationDate: "2020-11-03"
-    endpoints:
+  - schemaVersion: 2.1.0
+    metadata:
+      name: cdr/code-server/3.6.2
+      displayName: code-server
+      description: An open source distribution of Visual Studio Code as a cloud IDE
+      icon: https://raw.githubusercontent.com/sr229/discord-open-source/master/logos/code-server.svg
+      attributes:
+        publisher: cdr
+        version: 3.11.1
+        title: Visual Studio Code - Web (code-server)
+        repository: 'https://github.com/cdr/code-server'
+        firstPublicationDate: '2020-11-03'
+    components:
       - name: code-server
-        targetPort: 8080
-        exposure: public
-        protocol: http
+        container:
+          image: "codercom/code-server:latest"
+          volumeMounts:
+            - name: user-data
+              path: /home/coder/.local/share/code-server
+          mountSources: true
+          memoryLimit: 1024M
+          endpoints:
+            - name: code-server
+              targetPort: 8080
+              exposure: public
+              protocol: http
+              attributes:
+                type: main
         attributes:
-          type: main
-    containers:
-      - name: code-server
-        image: "codercom/code-server:latest"
-        volumeMounts:
-          - name: user-data
-            path: /home/coder/.local/share/code-server
-        mountSources: true
-        ports:
-          - exposedPort: 8080
-        memoryLimit: 1024M
+          ports:
+            - exposedPort: 8080
+      - name: user-data
+        volume: {}
         
