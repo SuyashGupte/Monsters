@@ -16,6 +16,7 @@ category: Editor
       attributes:
         protocol: http
         discoverable: true
+        type: ide
   containers:
     - image: "codercom/code-server:latest"
       name: code-server
