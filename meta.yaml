@@ -3,7 +3,7 @@ publisher: cdr
 editors:
   - schemaVersion: 2.1.0
     metadata:
-      name: cdr/code-server/3.6.2
+      name: cdr/code-server/latest
       displayName: code-server
       description: An open source distribution of Visual Studio Code as a cloud IDE
       icon: https://raw.githubusercontent.com/sr229/discord-open-source/master/logos/code-server.svg
