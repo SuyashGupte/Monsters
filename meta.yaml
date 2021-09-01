@@ -27,7 +27,6 @@ spec:
         - name: user-data
           mountPath: /home/coder/.local/share/code-server
       name: code-server
-      command: ["--auth none"]
       ports:
         - exposedPort: 8080
   initContainers: []
