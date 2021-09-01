@@ -29,4 +29,11 @@ spec:
       name: code-server
       ports:
         - exposedPort: 8080
+  commands:
+    - id: compile and run
+      exec:
+        component: code-server
+        commandLine: "sed -i.bak 's/auth: password/auth: none/' ~/.config/code-server/config.yaml"
+        workingDir: "${PWD}"
+        runAsUser: coder
   initContainers: []
