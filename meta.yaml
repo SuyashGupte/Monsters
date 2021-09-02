@@ -29,6 +29,6 @@ spec:
       name: code-server
       ports:
         - exposedPort: 8080
-      args: ["--auth", "none"]
-      command: 'sudo apt-get update && sudo apt install wget npm -y && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo apt install ./google-chrome-stable_current_amd64.deb -y'
+      command: ["export", "SERVICE_URL=https://open-vsx.org/", "export", "ITEM_URL=https://open-vsx.org/extension/redhat/vscode-didact"]
+      args: ["--auth", "none", "--install-extension","redhat.vscode-didact"]
   initContainers: []
