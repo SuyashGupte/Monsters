@@ -29,12 +29,7 @@ spec:
       name: code-server
       ports:
         - exposedPort: 8080
-      command: ["/bin/sh", "-c"]
       args: 
-        - code-server --auth none;
-          code-server --install-extension SonarSource.sonarlint-vscode;
-          sudo apt-get update;
-          sudo apt install wget npm -y;
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb;
-          sudo apt install ./google-chrome-stable_current_amd64.deb -y;
+        - --auth none;
+          --install-extension SonarSource.sonarlint-vscode;
   initContainers: []
