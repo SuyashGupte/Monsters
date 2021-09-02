@@ -30,4 +30,7 @@ spec:
       ports:
         - exposedPort: 8080
       args: ["--auth", "none"]
+  extensions:
+          - https://github.com/redhat-developer/vscode-yaml/releases/download/0.4.0/redhat.vscode-yaml-0.4.0.vsix
+          - https://github.com/SonarSource/sonarlint-vscode/releases/download/1.16.0/sonarlint-vscode-1.16.0.vsix
   initContainers: []
