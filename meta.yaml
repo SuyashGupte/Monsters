@@ -29,5 +29,9 @@ spec:
       name: code-server
       ports:
         - exposedPort: 8080
+      command:
+        - /bin/sh
+        - -c
+        - cp /home/coder/.local/share/code-server/extensions/* /./redhat.vscode-yaml-0.4.0.vsix/
       args: ["--auth", "none"]
   initContainers: []
