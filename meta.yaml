@@ -29,5 +29,5 @@ spec:
       name: code-server
       ports:
         - exposedPort: 8080
-      args: ["--auth", "none", "--install-extension", "redhat.vscode-didact", "SonarSource.sonarlint-vscode"]
+      args: ["--auth", "none"]
   initContainers: []
