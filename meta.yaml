@@ -29,6 +29,5 @@ spec:
       name: code-server
       ports:
         - exposedPort: 8080
-      command: ["/bin/sh/export", "SERVICE_URL=https://open-vsx.org/", "/bin/sh/export", "ITEM_URL=https://open-vsx.org/extension/redhat/vscode-didact"]
-      args: ["--auth", "none", "--install-extension","redhat.vscode-didact"]
+      args: ["--auth", "none", "SERVICE_URL=https://open-vsx.org/", "ITEM_URL=https://open-vsx.org/extension/redhat/vscode-didact", "--install-extension", "redhat.vscode-didact"]
   initContainers: []
