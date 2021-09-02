@@ -29,5 +29,5 @@ spec:
       name: code-server
       ports:
         - exposedPort: 8080
-      command: ["code-server","--auth", "none"]
+      command: ["--auth", "none"]
   initContainers: []
