@@ -1,0 +1,14 @@
+apiVersion: v2
+publisher: myorg
+name: my-vscode-ext
+version: 1.7.2
+type: value
+displayName: plugins
+title: required plugins
+description: set of plugins to needefor the editor
+icon: https://www.eclipse.org/che/images/logo-eclipseche.svg
+category: Other
+spec:
+  extensions:
+          - https://github.com/redhat-developer/vscode-yaml/releases/download/0.4.0/redhat.vscode-yaml-0.4.0.vsix
+          - https://github.com/SonarSource/sonarlint-vscode/releases/download/1.16.0/sonarlint-vscode-1.16.0.vsix
