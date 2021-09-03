@@ -7,7 +7,7 @@ displayName: plugins
 title: required plugins
 description: set of plugins to needefor the editor
 icon: https://www.eclipse.org/che/images/logo-eclipseche.svg
-category: Other
+category: Editor
 spec:
   extensions:
           - https://github.com/redhat-developer/vscode-yaml/releases/download/0.4.0/redhat.vscode-yaml-0.4.0.vsix
