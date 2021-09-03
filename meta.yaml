@@ -30,5 +30,4 @@ spec:
       ports:
         - exposedPort: 8080
       args: ["--auth", "none"]
-      command : ["code-server","--install-extension", "sonarsource.sonarlint-vscode"]
   initContainers: []
