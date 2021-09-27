@@ -29,5 +29,5 @@ spec:
       name: code-server
       ports:
         - exposedPort: 8080
-      args: ["--auth", "none"]
+      args: ["--auth", "none", "--install-extension", "/home/coder/extensions/apihub-0.0.999.vsix", "--install-extension", "/home/coder/extensions/redhat.vscode-didact-0.2.0.vsix", "--install-extension", "auchenberg.vscode-browser-preview"]
   initContainers: []
